@@ -5,9 +5,22 @@
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
+function remove(students, item) {
+
+    while (students.includes(item)) {
+        students.splice(students.indexOf(item), 1)
+    } return students;
+}
+
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+function remove(students, item) {
+
+    while (students.includes(item)) {
+        students.slice(students.indexOf(item), 1)
+    } return students;
+}
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
